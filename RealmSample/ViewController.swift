@@ -7,12 +7,43 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
+
+    @IBOutlet weak var englishLabel: UILabel!
+    @IBOutlet weak var japaneseLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var config = Realm.Configuration()
+        config.fileURL = config.fileURL?.deletingLastPathComponent().appendingPathComponent("words.realm")
+        do {
+            let realm = try Realm()
+            print(Realm.Configuration.defaultConfiguration.fileURL!)
+            realm.beginWrite()
+            let word = Word(value: [
+                "english": "This book is good.",
+                "japanese": "この本は良いです。"
+                ])
+            realm.add(word)
+            try realm.commitWrite()
+        } catch {
+            fatalError("cannot write realm")
+        }
+        
+        do {
+            let realm = try Realm()
+            let result = realm.objects(Word.self)
+            
+            englishLabel.text = result.first?.english
+            japaneseLabel.text = result.first?.japanese
+        } catch {
+            englishLabel.text = "no text"
+            japaneseLabel.text = "文章がありません"
+        }
     }
 
     override func didReceiveMemoryWarning() {

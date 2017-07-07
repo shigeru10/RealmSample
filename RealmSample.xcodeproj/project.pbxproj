@@ -13,6 +13,7 @@
 		B6C2DD181F0F71210074307D /* RealmSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6C2DD161F0F71210074307D /* RealmSample.xcdatamodeld */; };
 		B6C2DD1A1F0F71210074307D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C2DD191F0F71210074307D /* Assets.xcassets */; };
 		B6C2DD1D1F0F71210074307D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C2DD1B1F0F71210074307D /* LaunchScreen.storyboard */; };
+		B6C2DD261F0F77790074307D /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2DD251F0F77790074307D /* Word.swift */; };
 		D6683C0A70A74568F7CB2970 /* Pods_RealmSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D5E94CEFBC2638470BFFBA /* Pods_RealmSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		B6C2DD191F0F71210074307D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6C2DD1C1F0F71210074307D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6C2DD1E1F0F71210074307D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6C2DD251F0F77790074307D /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		F0AD4F3BEC2ECC1E7C39CCCE /* Pods-RealmSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmSample/Pods-RealmSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +56,7 @@
 		B6C2DD031F0F71210074307D = {
 			isa = PBXGroup;
 			children = (
+				B6C2DD241F0F77480074307D /* Realm */,
 				B6C2DD0E1F0F71210074307D /* RealmSample */,
 				B6C2DD0D1F0F71210074307D /* Products */,
 				40C8CA4A9D3055DC66331BD9 /* Pods */,
@@ -81,6 +84,14 @@
 				B6C2DD161F0F71210074307D /* RealmSample.xcdatamodeld */,
 			);
 			path = RealmSample;
+			sourceTree = "<group>";
+		};
+		B6C2DD241F0F77480074307D /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				B6C2DD251F0F77790074307D /* Word.swift */,
+			);
+			name = Realm;
 			sourceTree = "<group>";
 		};
 		EB5176D6C561567BFD4CF4FA /* Frameworks */ = {
@@ -216,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C2DD181F0F71210074307D /* RealmSample.xcdatamodeld in Sources */,
+				B6C2DD261F0F77790074307D /* Word.swift in Sources */,
 				B6C2DD121F0F71210074307D /* ViewController.swift in Sources */,
 				B6C2DD101F0F71210074307D /* AppDelegate.swift in Sources */,
 			);
@@ -385,6 +397,7 @@
 				B6C2DD231F0F71210074307D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
