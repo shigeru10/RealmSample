@@ -16,6 +16,12 @@ class Word: Object {
 //  override static func ignoredProperties() -> [String] {
 //    return []
 //  }
+    
+    dynamic var id = 0
     dynamic var english = ""
     dynamic var japanese = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
